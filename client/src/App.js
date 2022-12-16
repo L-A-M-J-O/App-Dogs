@@ -1,10 +1,19 @@
 import './App.css';
+import {Switch as Routes, Route} from 'react-router-dom'
+import { Header } from './pages/Header';
+import { Home } from './pages/Home';
+import { Footer } from './pages/Footer';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Henry Dogs</h1>
-    </div>
+    <>
+    <Routes>
+      <Header/>
+      <Home/>
+          <Route path="" element={''} />
+      <Footer/>
+    </Routes>
+    </>
   );
 }
 
