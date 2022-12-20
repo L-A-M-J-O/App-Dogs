@@ -24,15 +24,23 @@ module.exports = (sequelize) => {
     },
     life_span: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     origin: {
       type: DataTypes.STRING,
       allowNull: true,
     },
     temperament: {
-      type: DataTypes.ENUM("Stubborn, Curious, Playful, Adventurous, Active, Fun-loving"),
-      allowNull: false,
+      id: {
+        type: DataTypes.UUID,
+        defaultValue: DataTypes.UUIDV4,
+        allowNull:false,
+        primaryKey: true,
+      },
+      name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
     },
     image: {
       type: DataTypes.STRING,
