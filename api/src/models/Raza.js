@@ -1,6 +1,5 @@
 const { DataTypes } = require('sequelize');
 module.exports = (sequelize) => {
-
   sequelize.define('raza', {
     id:{
       type: DataTypes.UUID,
@@ -24,5 +23,5 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
       allowNull: true,
     },
-  });
+  }, {timestamps: false});
 };
